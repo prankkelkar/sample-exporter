@@ -1,7 +1,7 @@
-// exporter.go
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/prometheus/client_golang/prometheus"
@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	fmt.Println("starting server")
 	// Create a new gauge metric
 	helloMetric := prometheus.NewGauge(prometheus.GaugeOpts{
 		Name: "hello_metric",
